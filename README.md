@@ -533,7 +533,7 @@ const key = {
 }
 // pass to readMessages function
 // can pass multiple keys to read multiple messages as well
-await sock.readMessages([key])
+await sock.sendReadReceipt(id, participant,[key])
 ```
 
 The message ID is the unique identifier of the message that you are marking as read. On a `WAMessage`, the `messageID` can be accessed using ```messageID = message.key.id```.
